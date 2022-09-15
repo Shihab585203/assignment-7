@@ -5,6 +5,11 @@ const countdownOverlay = document.getElementById("countdown");
 const resultModal = document.getElementById("result");
 const modalBackground = document.getElementById("modal-background");
 
+
+const boxContainer = document.getElementById("box-container");
+
+
+
 // variables
 let userText = "";
 let errorCount = 0;
@@ -113,8 +118,9 @@ const start = () => {
     if (count == 0) {
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
-      countdownOverlay.style.display = "flex";
+      countdownOverlay.style.display = "none";
       display.classList.remove("inactive");
+      //boxContainer.style.display = 'none';
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
@@ -135,5 +141,5 @@ setInterval(() => {
   const timeSpent = (currentTime - startTime) / 1000;
 
 
-  document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
+document.getElementById("show-time").innerHTML = `${startTime ? timeSpent : 0} seconds`;
 }, 1000);

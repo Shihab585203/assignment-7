@@ -92,6 +92,7 @@ body {
 }
 .inactive {
   border: 2px solid white !important;
+  display: block;
 }
 .hidden {
   display: none;
