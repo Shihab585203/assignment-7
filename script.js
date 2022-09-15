@@ -90,12 +90,11 @@ const gameOver = () => {
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
-
   addHistory(questionText, noDecimalTimeTaken, errorCount);
 
   // restart everything
   startTime = null;
-  errorCount++;
+  errorCount = 0;
   userText = "";
   display.classList.add("inactive");
 };
